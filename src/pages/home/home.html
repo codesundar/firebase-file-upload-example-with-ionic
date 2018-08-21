@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic File Upload
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  Uploaded File: <a *ngIf="this.url" href="{{this.url}}">{{this.url}}</a>
+
+  <button ion-button (click)="chooseFile()">Upload Image</button>
+  <input style="display: none;" id="image" name="image" type="file" (change)="upload()">
+</ion-content>
